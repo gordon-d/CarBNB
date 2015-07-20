@@ -1,0 +1,20 @@
+<div class="signup">
+	<h1>Register now!</h1>
+
+	<%= form_for @user do |f|%>
+	<br>
+	<%= f.label "What's your name?"%><br>
+	<%= f.text_field :name%><br>
+
+	<%= f.label "Where are you from?"%><br>
+	<%= f.text_field :location%><br>
+
+	<%= f.label "What's your email?"%><br>
+	<%= f.text_field :email%><br>
+
+	<%= f.label "What would you like your password to be?"%><br>
+	<%= f.password_field :password%><br>
+
+	<%= f.submit 'Register'%>
+	<% end %>
+</div>

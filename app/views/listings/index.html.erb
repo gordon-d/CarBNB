@@ -1,0 +1,10 @@
+<h1>Listings</h1>
+
+<% @listings.each do |listing|%>
+	<div class="listing">
+		<h4><%=listing.description%></h4>
+		<p>From <%= listing.start_date%> to <%= listing.end_date%></p>
+		<p>Price: $<%= listing.price%></p>
+		<img src="<%=listing.car.image%>">
+	</div>
+<% end%>

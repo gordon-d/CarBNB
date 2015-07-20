@@ -1,0 +1,24 @@
+<div class="user-profile">
+	<h1><%= @user.name %></h1>
+	<% if @editable%>
+		<button class="edit" id="edit-name">Edit Name Info</button>
+	<% end %>
+	<p>Location: <%= @user.location%>	<% if @editable %>
+		<button class="edit" id="edit-location">Edit Location Info</button>
+	<% end %></p>
+
+	<% if @editable%>
+		<p>Email: <%= @user.email%> <button class="edit" id="edit-email">Edit Email</button></p>
+	<% end %>
+
+	<ul>
+		<% @user.cars.each do |car| %>
+		<li><%= car.make %><br>
+			<img src="<%=car.picture%>"
+			<p><%= car.description %></p>
+			<button class="edit" id="edit-car"></button>
+		</li>
+		<% end %>
+	</ul>
+
+</div>
